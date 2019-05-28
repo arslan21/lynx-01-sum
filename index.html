@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>summ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  </head>
+  <body class="body">
+    <div class="app">
+      <div class="boxWraper">
+
+        <section class="box">
+          <label for="first">Введите первое число</label>
+          <input type="text" id="first">
+          <label for="second">Введите второе число</label>
+          <input type="text" id="second">
+          <button type="button" name="button" v-on:click="showResult">
+            Расчитать сумму
+          </button>
+        </section>
+
+        <!-- <transition name="madal-transition">         -->
+          <div id="modal" v-if="modalOpened">
+            <div class="modalWraper">
+              <section class="resultBox">
+                <p>Полученный результат</p>
+                <p>{{result}}</p>
+                <button type="button" name="button" v-on:click="closeResult">ОК</button>
+              </section>
+            </div>
+          </div>
+        <!-- </transition> -->
+      </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
