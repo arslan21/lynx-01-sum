@@ -12,9 +12,9 @@
 
         <section class="box">
           <label for="first">Введите первое число</label>
-          <input type="text" id="first">
+          <input type="text" id="first" v-model="first">
           <label for="second">Введите второе число</label>
-          <input type="text" id="second">
+          <input type="text" id="second" v-model="second">
           <button type="button" name="button" v-on:click="showResult">
             Расчитать сумму
           </button>
